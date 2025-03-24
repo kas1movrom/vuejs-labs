@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Калькулятор</title>
+    </head>
+    <body>
+        <h1>Калькулятор</h1>
+        <input type="text" id="display" readonly>
+        <br><br>
+        <button onclick="appendToDisplay('1')">1</button>
+        <button onclick="appendToDisplay('2')">2</button>
+        <button onclick="appendToDisplay('3')">3</button>
+        <button onclick="setOperator('+')">+</button>
+        <br>
+        <button onclick="appendToDisplay('4')">4</button>
+        <button onclick="appendToDisplay('5')">5</button>
+        <button onclick="appendToDisplay('6')">6</button>
+        <button onclick="setOperator('-')">-</button>
+        <br>
+        <button onclick="appendToDisplay('7')">7</button>
+        <button onclick="appendToDisplay('8')">8</button>
+        <button onclick="appendToDisplay('9')">9</button>
+        <button onclick="setOperator('*')">*</button>
+        <br>
+        <button onclick="appendToDisplay('0')">0</button>
+        <button onclick="clearDisplay()">C</button>
+        <button onclick="calculate()">=</button>
+        <button onclick="setOperator('/')">/</button>
+
+        <script>
+            let currentInput = '';
+            let firstOperand = null;
+            let operator = null;
+            let shouldResetDisplay = false;
+    
+            const display = document.getElementById('display');
+    
+            function appendToDisplay(number) {
+                if (shouldResetDisplay) {
+                    currentInput = '';
+                    shouldResetDisplay = false;
+                }
+                currentInput += number;
+                display.value = currentInput;
+            }
+    
+            function setOperator(op) {
+                if (currentInput === '') return;
+                if (firstOperand !== null) calculate();
+                firstOperand = parseFloat(currentInput);
+                operator = op;
+                shouldResetDisplay = true;
+            }
+    
+            function calculate() {
+                if (operator === null || shouldResetDisplay) return;
+                if (currentInput === '') return;
+    
+                const secondOperand = parseFloat(currentInput);
+                let result;
+    
+                switch (operator) {
+                    case '+':
+                        result = firstOperand + secondOperand;
+                        break;
+                    case '-':
+                        result = firstOperand - secondOperand;
+                        break;
+                    case '*':
+                        result = firstOperand * secondOperand;
+                        break;
+                    case '/':
+                        result = firstOperand / secondOperand;
+                        break;
+                    default:
+                        return;
+                }
+    
+                display.value = result;
+                currentInput = result.toString();
+                operator = null;
+                shouldResetDisplay = true;
+            }
+    
+            function clearDisplay() {
+                currentInput = '';
+                firstOperand = null;
+                operator = null;
+                display.value = '';
+            }
+        </script>
+    </body>
+</html>
