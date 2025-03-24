@@ -34,4 +34,15 @@
             </tbody>
         </table>
     </body>
+    <script>
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault()
+        })
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault()
+        })
+        document.addEventListener('copy', function(e) {
+            e.preventDefault()
+        })
+    </script>
 </html>
