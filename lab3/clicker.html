@@ -8,17 +8,23 @@
     <body>
         <h1>Clicker</h1>
         <p>Counter: <div id="counter">0</div></p>
+        <p>AverageL <div id="avg">0</div></p>
         <button>Click me</button>
     </body>
     <script>
-        let counter = localStorage.getItem('pushButtonCount') || 0
+        let start = Date.now()
+        let counter = parseInt(localStorage.getItem('pushButtonCount')) || 0
         let button = document.querySelector('button')
 
-        button.onclick = function() {
-            counter ++
-            document.getElementById("counter").innerHTML = counter
-        }
+        document.getElementById("counter").innerHTML = counter
 
-        localStorage.setItem('pushButtonCount', counter)
+        button.onclick = function() {
+            let end = Date.now()
+            counter ++
+            
+            document.getElementById("avg").innerHTML = counter / ((end - start) * 1000)
+            document.getElementById("counter").innerHTML = counter
+            localStorage.setItem('pushButtonCount', counter)
+        }
     </script>
 </html>
