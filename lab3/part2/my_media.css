@@ -1,0 +1,33 @@
+.mobile {
+    display: block;
+}
+.tablet {
+    display: none;
+}
+.desktop {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .mobile {
+        display: none;
+    }
+    .tablet {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+}
+
+@media (min-width: 1024px) {
+    .modile {
+        display: none;
+    }
+    .tablet {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>МЕРНI 2023</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        header {
+            background-color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        nav {
+            background-color: #e9ecef;
+            padding: 15px 0;
+        }
+        
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 20px;
+        }
+        
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        nav a:hover {
+            color: #007bff;
+        }
+        
+        main {
+            flex: 1;
+            padding: 30px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .columns {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .column {
+            flex: 1;
+            padding: 60px;
+            border: 1px solid #dee2e6;
+            margin: 0 10px;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        .har {
+            border: 1px solid #dee2e6;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 90px;
+            width: 100%;
+        }
+        
+        footer {
+            background-color: #f8f9fa;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Логотип</div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#">Домой</a></li>
+            <li><a href="#">Товары</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">О нас</a></li>
+            <li><a href="#">Контакты</a></li>
+        </ul>
+    </nav>
+    
+    <main>
+        <h1 class="har">Характеристика</h1>
+        
+        <div class="columns">
+            <div class="column">Колонка 1</div>
+            <div class="column">Колонка 2</div>
+            <div class="column">Колонка 3</div>
+        </div>
+    </main>
+    
+    <footer>
+        © МЕРНI 2023
+    </footer>
+</body>
+</html>
