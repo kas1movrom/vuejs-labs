@@ -1,10 +1,7 @@
-// Файл layout.sass
-
 $main-color: #d1d1d1
 $base-font-family: sans-serif
 $base-padding: 20px
 
-// Миксины 
 @mixin style($padding: $base-padding, $align: center, $color: #d1d1d1)
   background-color: $color
   padding: calc($padding/2)
@@ -16,7 +13,6 @@ $base-padding: 20px
   margin: 0
   padding: 0
 
-// Общие стили
 body
   @include base-styles
 
@@ -27,7 +23,6 @@ body
 header
   @include style($padding: $base-padding, $align: center, $color: white)
 
-// Navbar
 .navbar
   @include style
   a
@@ -38,7 +33,6 @@ header
   @include style
   height: 200px
 
-// Columns
 .columns
   display: flex
   justify-content: space-between
@@ -49,6 +43,5 @@ header
     width: 31%
     height: 200px
 
-// Footer
 footer
   @include style

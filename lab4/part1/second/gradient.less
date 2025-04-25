@@ -1,16 +1,16 @@
 ul {
     li {
       background-color: black;
-      .loop(@i: 1) when (@i <= 100) { // Миксин для цикла
-        &:nth-child(@{i}) { // Интерполяция в селекторе
+      .loop(@i: 1) when (@i <= 100) { 
+        &:nth-child(@{i}) { 
           @red: @i;
           @green: 256 - @i;
           @blue: 0;
   
           color: rgb(@red, @green, @blue);
         }
-        .loop((@i + 1)); // Рекурсивный вызов миксина
+        .loop((@i + 1)); 
       }
-      .loop(); // Запуск цикла
+      .loop(); 
     }
   }
