@@ -1,0 +1,6 @@
+sass --watch .\sass_input.sass .\sass_output.css
+
+sass --watch .\scss_input.scss .\scss_output.css
+
+npm install lessc-watcher
+npx lessc-watcher --src .\less_input.less --dst .\less_output.css

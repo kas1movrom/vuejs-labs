@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Радужный список чисел</title>
+  <link rel="stylesheet" href="colors.css">
+</head>
+<body>
+  <div class="container">
+    <ol class="numeric-sequence"></ol>
+  </div>
+
+  <script>
+    (function() {
+      const sequenceContainer = document.querySelector('.numeric-sequence');
+      const totalNumbers = 100;
+      
+      const generateNumbers = (count) => {
+        let items = '';
+        for (let num = 1; num <= count; num++) {
+          items += `<li>Элемент ${num}</li>`;
+        }
+        return items;
+      };
+      
+      sequenceContainer.innerHTML = generateNumbers(totalNumbers);
+    })();
+  </script>
+</body>
+</html>

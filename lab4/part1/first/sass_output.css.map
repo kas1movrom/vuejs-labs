@@ -1,0 +1,8 @@
+{
+    "version":3,
+    "sourceRoot":"",
+    "sources":["sass_input.sass"],
+    "names":[],
+    "mappings":"AAAA;EAEI;EACA;EACA;EACA",
+    "file":"sass_output.css"
+}

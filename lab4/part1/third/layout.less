@@ -1,0 +1,59 @@
+@main-color: #d1d1d1;
+@base-font-family: sans-serif;
+@base-padding: 20px;
+
+.style(@padding: @base-padding, @align: center, @color: @main-color) {
+  background-color: @color;
+  padding: (@padding / 2);
+  margin-bottom: @padding;
+  text-align: @align;
+}
+
+.base-styles() {
+  font-family: @base-font-family;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  .base-styles();
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+    .style(@padding: @base-padding, @align: center, @color: white);
+  }
+
+.navbar {
+  .style();
+
+  a {
+    color: purple;
+    margin: 0 10px;
+  }
+}
+
+.feature {
+  .style();
+  height: 200px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  .column {
+    .style();
+    width: 31%;
+    height: 200px;
+  }
+}
+
+footer {
+  .style();
+}

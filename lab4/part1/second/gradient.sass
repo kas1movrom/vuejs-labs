@@ -1,0 +1,9 @@
+ul
+  li
+    background-color: black
+    @for $i from 1 through 100
+      &:nth-child(#{$i})
+        $red: $i
+        $green: 256 - $i
+        $blue: 0
+        color: rgb($red, $green, $blue)

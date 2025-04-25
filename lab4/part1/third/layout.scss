@@ -1,0 +1,58 @@
+$main-color: #d1d1d1;
+$base-font-family: sans-serif;
+$base-padding: 20px;
+
+@mixin style($padding: $base-padding, $align: center, $color: #d1d1d1) {
+    background-color: $color;
+    padding: calc($padding/2);
+    margin-bottom: $padding;
+    text-align: $align;
+}
+
+@mixin base-styles {
+  font-family: $base-font-family;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  @include base-styles;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  @include style($color: white);
+}
+
+.navbar {
+    @include style;
+  a {
+    color: purple;
+    margin: 0 10px;
+  }
+}
+
+.feature {
+  @include style;
+  height: 200px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+
+  .column {
+    @include style;
+    width: 31%;
+    height: 200px;
+  }
+}
+
+footer {
+  @include style;
+}
