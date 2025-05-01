@@ -1,2 +1,4 @@
 lab1/introduction-to-web-development/node_modules
+*.idea
+*.vscode
 # 42.01
